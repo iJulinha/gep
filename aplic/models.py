@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Pessoa(models.Model):
 
     email = models.EmailField('E-mail', blank=True, max_length=200, null=True)
@@ -66,7 +67,7 @@ class Funcionario(Pessoa):
         verbose_name_plural = 'Funcionarios'
 
         def __str__(self):
-            return f'{self.nome} é um membro da empresa e ocupa o cargo de {self.cargo}'
+            return self.nome
 
 class Base(models.Model):
 
